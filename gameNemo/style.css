@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(back2.jpg);
+    background-size: cover;
+}
+main{
+    height: 667px;
+    text-align: center;
+}
+img{
+    width: 100px;
+}
+p{
+    color: white;
+}
+.wrapper{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 25px;
+    margin: auto auto;
+    transition-property: margin;
+    transition-duration: 0.2s;
+}
