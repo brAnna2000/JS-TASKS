@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <p>Wisdom Pet Medicine</p>
+        </div>
+    </header>
+    <div class="container">
+    <div class="appointment">
+        <img src="plus.png">
+        <span>Add Appointment</span>
+    </div>
+    <form>
+        <div class="form-container">
+            <p>Pet Name</p>
+            <input type="text" placeholder="Pet's Name" name='pet' required>
+            <p>Pet Owner</p>
+            <input type="text" placeholder="Owner's Name" name='owner' required>
+            <p>Date</p>
+            <input type="text" placeholder="dd/mm/yy" name='date' required>
+            <p>Time</p>
+            <input type="text" placeholder="--:--" name='time' required>
+            <p>Apt. Notes</p>
+            <input type="text" placeholder="Appointment Notes" name='appointment' required>
+        </div>
+        <input type="submit" value="Add Appointment">
+        <div class="another">
+        <input type="text" placeholder="Search" name='search'>
+        <select>
+            <option value="pet">Pet's Name</option>
+            <option value="owner">Owner's Name</option>
+            <option value="date">Date</option>
+            <option value="time">Time</option>
+            <option value="appointment">Appointment</option>
+        </select>
+        </div>
+    </form>
+
+    <ul></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
