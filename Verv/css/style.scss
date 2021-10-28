@@ -1,0 +1,624 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'SF Pro Display';
+	src: url('../fonts/SFProDisplay-Black.eot');
+	src: local('SF Pro Display Medium'), local('SFProDisplay-Medium'),
+        url('SFProDisplay-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Medium.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Medium.woff') format('woff'),
+        url('../fonts/SFProDisplay-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+body {
+	text-align: center;
+	font-family: 'SF Pro Display';
+	p {
+		font-size: 11px;
+		color: rgba(0, 0, 0, 1);
+		opacity: 39.59%;
+		margin-top: 17px;
+	}
+}
+.back {
+	background: linear-gradient(225deg, #894AC9 0%, #4D46B1 100%);
+	height: 262px;
+	position: relative;
+	p {
+		padding-top: 50px;
+		font-size: 24px;
+		color: white;
+	}
+}
+i {
+	position: absolute;
+	top: 29px;
+	left: 20px;
+}
+.close {
+	position: absolute;
+	top: 29px;
+	right: 10px;
+}
+.mask, .lines {
+	position: absolute;
+	z-index: 0;
+	margin-top: 0;
+	top: 86px;
+	left: 0px;
+}
+.woman {
+	position: absolute;
+	z-index: 2;
+	top: 60px;
+	left: 150px;
+}
+.upperLine,.bottomLine {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	object-fit: cover;
+}
+.free {
+	position: absolute;
+	top: 86px;
+	right: 20px;
+}
+.pro {
+	position: absolute;
+	height: 27px;
+	width: 51px;
+	top: 139px;
+	right: 20px;
+	opacity: 0;
+	transition: 1s;
+	animation: show 1s 1, pulsing 1s infinite;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+.green {
+	position: absolute;
+	top: 164px;
+	right: 33px;
+}
+.red {
+	position: absolute;
+	top: 112px;
+	right: 33px;
+}
+.free,.pro,.green,.red {
+	opacity: 0;
+	transition: 1s;
+	animation: show 1s 1;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+@keyframes show {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;;
+    }
+  }
+	.elem {
+		position: absolute;
+		z-index: 0;
+		top: 84px;
+		left: 0px;
+		overflow: hidden;
+		width: 0;
+		height: 200px;
+		animation: anim 1s linear forwards;
+	}
+    @keyframes anim{
+        50%{
+            opacity: 0;
+            width: 0;
+        }
+        100%{
+            opacity: 1;
+            width: 320px;
+        }
+        }
+        @keyframes pulsing {
+        0% {
+            opacity: 1;
+            transform: scale(1.0, 1.0);
+        }
+        50% {
+            opacity: 1;
+            transform: scale(1.1, 1.1);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1.0, 1.0);
+        }
+        }
+	.healthGroups {
+		position: absolute;
+		top: 91px;
+		left: 20px;
+	}
+.healthGroups {
+	span {
+		display: block;
+		text-align: left;
+		font-size: 13px;
+		color: white;
+		padding-bottom: 10px;
+	}
+}
+.wrapper {
+	width: 320px;
+	position: absolute;
+	top: 200px;
+	margin: 0 auto;
+}
+.slider-container {
+	overflow: hidden;
+}
+.slider-track {
+	display: flex;
+	transition: .2s;
+}
+.slider {
+	display: inline-block;
+	background: rgba(243, 242, 249, 1);
+	backdrop-filter: blur(9.06094px);
+	border-radius: 10px;
+	height: 110px;
+	width: 280px;
+	text-align: left;
+	padding: 15px 15px 12px 15px;
+	margin-right: 10px;
+	&:first-child {
+		margin-left: 20px;
+	}
+	span {
+		display: inline-block;
+		width: 49%;
+		&:nth-of-type(2n) {
+			text-align: right;
+			font-weight: normal;
+			opacity: 0.5;
+		}
+	}
+	p {
+		font-size: 13px;
+		color: black;
+		padding-top: 5px;
+	}
+}
+.stars {
+	margin-top: 7px;
+}
+.sliderDark {
+	background: linear-gradient(225deg, #262526 0%, #19181A 100%);
+	color: white;
+}
+.container {
+	display: flex;
+	margin-top: 83px;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 0 20px;
+}
+.card {
+	background-color: rgba(243, 242, 249, 1);
+	backdrop-filter: blur(9.06094px);
+	width: 88px;
+	height: 112px;
+	border-radius: 5px;
+}
+.selected {
+	background: linear-gradient(rgba(137, 74, 201, 1), rgba(77, 70, 177, 1));
+	color: white;
+}
+.card:first-of-type p:first-of-type, .card:nth-of-type(2n) p:first-of-type, .card:nth-of-type(3n) p:first-of-type {
+	font-size: 20px;
+	margin-top: 6px;
+}
+.card:first-of-type p:nth-of-type(2n), .card:nth-of-type(2n) p:nth-of-type(2n), .card:nth-of-type(3n) p:nth-of-type(2n) {
+	font-size: 13px;
+}
+.card:first-of-type p:nth-of-type(3n), .card:nth-of-type(2n) p:nth-of-type(3n), .card:nth-of-type(3n) p:nth-of-type(3n) {
+	margin-top: 5px;
+}
+.card:first-of-type p:nth-of-type(4n), .card:nth-of-type(2n) p:nth-of-type(4n), .card:nth-of-type(3n) p:nth-of-type(4n) {
+	font-size: 11px;
+}
+.card:first-of-type p:last-of-type, .card:nth-of-type(2n) p:last-of-type, .card:nth-of-type(3n) p:last-of-type {
+	font-size: 10px;
+	margin-top: 3px;
+}
+.card p, .card2 p, .card3 p {
+	font-size: 11px;
+}
+.save2 {
+	position: absolute;
+	top: -18px;
+	background-color: rgba(252, 191, 89, 1);
+	width: 88px;
+	height: 21px;
+	border-radius: 5px 5px 0px 0px;
+	font-size: 11px;
+	line-height: 21px;
+	font-weight: bold;
+	color: black;
+}
+.save3 {
+	position: absolute;
+	top: -18px;
+	background-color: rgba(252, 167, 89, 1);
+	width: 88px;
+	height: 21px;
+	border-radius: 5px 5px 0px 0px;
+	font-size: 11px;
+	line-height: 21px;
+	font-weight: bold;
+	color: black;
+}
+.sale {
+	position: absolute;
+	bottom: 0px;
+	background-color: rgba(252, 167, 89, 1);
+	width: 88px;
+	height: 15px;
+	border-radius: 0px 0px 5px 5px;
+	font-size: 7px;
+	line-height: 15px;
+	font-weight: bold;
+	color: black;
+}
+button {
+	background: linear-gradient(225deg, #542285 0%, #222266 100%);
+	width: 280px;
+	height: 50px;
+	border-radius: 5px;
+	font-size: 22px;
+	color: white;
+	border-color: transparent;
+	margin-top: 13px;
+}
+// @media {
+//     screen {
+//       and {
+//         (device-width {
+//           &: {
+//             375px) {
+//               .back{
+//       height: 419px;
+//               width: 381px;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+  @media screen and (device-width: 375px) {
+    .back{
+        height: 419px;
+        width: 381px;
+    }
+  i {
+    top: 29px;
+    left: 20px;
+  }
+  .close {
+    top: 48px;
+    right: 14px;
+  }
+  .back {
+    p {
+      padding-top: 80px;
+      font-size: 34px;
+    }
+  }
+  .mask, .lines {
+    top: 140px;
+    left: 0px;
+  }
+  .mask {
+    content: url(../img/mask2.png);
+  }
+  .lines {
+    content: url(../img/lines2.png);
+  }
+  .woman {
+    content: url(../img/woman2.png);
+    top: 106px;
+    left: 154px;
+  }
+  .upperLine, .bottomLine {
+    top: 0px;
+    left: 0px;
+  }
+  .upperLine {
+    content: url(../img/upperLine2.png);
+  }
+  .bottomLine {
+    content: url(../img/bottomLine2.png);
+  }
+  .free {
+    top: 164px;
+    right: 30px;
+  }
+  .pro {
+    top: 252px;
+    right: 30px;
+  }
+  .green {
+    top: 276px;
+    right: 43px;
+  }
+  .red {
+    top: 189px;
+    right: 43px;
+  }
+  .elem {
+    top: 136px;
+    left: 0px;
+    width: 0;
+    animation: anim 1s linear forwards;
+  }
+  @keyframes anim {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 391px;
+    }
+  }
+    .healthGroups {
+      top: 157px;
+      left: 25px;
+    }
+
+  .healthGroups {
+    span {
+      font-size: 13px;
+      padding-bottom: 30px;
+    }
+  }
+  .wrapper {
+    width: 381px;
+    top: 346px;
+  }
+  .slider {
+    height: 145px;
+    width: 335px;
+    padding: 20px;
+    p {
+      font-size: 15px;
+      padding-top: 5px;
+    }
+  }
+  .stars {
+    margin-top: 10px;
+  }
+  .container {
+    margin-top: 113px;
+    padding: 0 20px;
+  }
+  .card {
+    width: 105px;
+    height: 131px;
+  }
+  .card:first-of-type p:first-of-type, .card:nth-of-type(2n) p:first-of-type, .card:nth-of-type(3n) p:first-of-type {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+  .card:first-of-type p:nth-of-type(2n), .card:nth-of-type(2n) p:nth-of-type(2n), .card:nth-of-type(3n) p:nth-of-type(2n) {
+    font-size: 15px;
+  }
+  .card:first-of-type p:nth-of-type(3n), .card:nth-of-type(2n) p:nth-of-type(3n), .card:nth-of-type(3n) p:nth-of-type(3n) {
+    margin-top: 7px;
+  }
+  .card:first-of-type p:nth-of-type(4n), .card:nth-of-type(2n) p:nth-of-type(4n), .card:nth-of-type(3n) p:nth-of-type(4n) {
+    font-size: 13px;
+  }
+  .card:first-of-type p:last-of-type, .card:nth-of-type(2n) p:last-of-type, .card:nth-of-type(3n) p:last-of-type {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .card p, .card2 p, .card3 p {
+    font-size: 13px;
+  }
+  .save2 {
+    top: -20px;
+    width: 105px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .save3 {
+    top: -20px;
+    width: 105px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .sale {
+    width: 105px;
+    height: 16px;
+    font-size: 9px;
+    line-height: 16px;
+  }
+  button {
+    width: 335px;
+    height: 50px;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  body {
+    p {
+      font-size: 11px;
+      margin-top: 20px;
+    }
+  }
+}
+  @media screen and (device-width: 414px){
+  .back{
+        height: 456px;
+        width: 414px;
+  }
+  i {
+    top: 29px;
+    left: 20px;
+  }
+  .back {
+    p {
+      padding-top: 80px;
+      font-size: 34px;
+    }
+  }
+  .mask, .lines {
+    top: 155px;
+    left: 0;
+  }
+  .mask {
+    content: url(../img/mask3.png);
+  }
+  .lines {
+    content: url(../img/lines3.png);
+  }
+  .woman {
+    content: url(../img/woman3.png);
+    top: 113px;
+    left: 188px;
+  }
+  .upperLine, .bottomLine {
+    top: 0;
+    left: 0;
+  }
+  .upperLine {
+    content: url(../img/upperLine3.png);
+  }
+  .bottomLine {
+    content: url(../img/bottomLine3.png);
+  }
+  .free {
+    top: 188px;
+    right: 14px;
+  }
+  .pro {
+    top: 284px;
+    right: 14px;
+  }
+  .green {
+    top: 312px;
+    right: 27px;
+  }
+  .red {
+    top: 215px;
+    right: 27px;
+  }
+  .elem {
+    top: 156px;
+    left: 0px;
+    width: 0;
+    animation: anim 1s linear forwards;
+  }
+  @keyframes anim {
+    0% {
+        opacity: 0;
+        width: 0;
+    }
+    100% {
+        opacity: 1;
+        width: 419px;
+    }
+  }
+    .healthGroups {
+      top: 174px;
+      left: 33px;
+    }
+  .healthGroups {
+    span {
+      font-size: 13px;
+      padding-bottom: 30px;
+    }
+  }
+  .wrapper {
+    width: 414px;
+    top: 393px;
+  }
+  .slider {
+    height: 145px;
+    width: 374px;
+    padding: 20px 20px 24px 20px;
+    p {
+      padding-top: 5px;
+      font-size: 15px;
+    }
+  }
+  .stars {
+    margin-top: 10px;
+  }
+  .container {
+    margin-top: 133px;
+    padding: 0 20px;
+  }
+  .card {
+    width: 118px;
+    height: 151px;
+  }
+  .card:first-of-type p:first-of-type, .card:nth-of-type(2n) p:first-of-type, .card:nth-of-type(3n) p:first-of-type {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+  .card:first-of-type p:nth-of-type(2n), .card:nth-of-type(2n) p:nth-of-type(2n), .card:nth-of-type(3n) p:nth-of-type(2n) {
+    font-size: 15px;
+  }
+  .card:first-of-type p:nth-of-type(3n), .card:nth-of-type(2n) p:nth-of-type(3n), .card:nth-of-type(3n) p:nth-of-type(3n) {
+    margin-top: 12px;
+  }
+  .card:first-of-type p:nth-of-type(4n), .card:nth-of-type(2n) p:nth-of-type(4n), .card:nth-of-type(3n) p:nth-of-type(4n) {
+    font-size: 13px;
+  }
+  .card:first-of-type p:last-of-type, .card:nth-of-type(2n) p:last-of-type, .card:nth-of-type(3n) p:last-of-type {
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .card p, .card2 p, .card3 p {
+    font-size: 13px;
+  }
+  .save2 {
+    top: -20px;
+    width: 118px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .save3 {
+    top: -20px;
+    width: 118px;
+    height: 25px;
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .sale {
+    width: 118px;
+    height: 16px;
+    font-size: 9px;
+    line-height: 16px;
+  }
+  button {
+    width: 374px;
+    height: 50px;
+    font-size: 22px;
+    margin-top: 29px;
+  }
+  body {
+    & > p {
+      font-size: 11px;
+      margin-top: 20px;
+    }
+}}
